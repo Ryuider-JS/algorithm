@@ -5,10 +5,7 @@
 ## 입력값이 하나일 경우(문자)
 
 ```javascript
-const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
-	.toString()
-	.trim()
+const input = require('fs').readFileSync('/dev/stdin').toString().trim()
 ```
 
 <!-- input: hello -->
@@ -17,10 +14,7 @@ const input = require('fs')
 ## 입력값이 하나일 경우(숫자)
 
 ```javascript
-const input = +require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
-	.toString()
-	.trim()
+const input = +require('fs').readFileSync('/dev/stdin').toString().trim()
 ```
 
 <!-- input: 8 -->
@@ -29,11 +23,7 @@ const input = +require('fs')
 ## 입력값이 띄어쓰기로 구분된 한 줄의 값들인 경우(문자)
 
 ```javascript
-const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
-	.toString()
-	.trim()
-	.split(' ')
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ')
 ```
 
 <!-- input: hello world -->
@@ -42,12 +32,7 @@ const input = require('fs')
 ## 입력값이 띄어쓰기로 구분된 한 줄의 값들인 경우(숫자)
 
 ```javascript
-const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
-	.toString()
-	.trim()
-	.split(' ')
-	.map(Number)
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map(Number)
 ```
 
 <!-- input: 8 7 56 -->
@@ -56,11 +41,7 @@ const input = require('fs')
 ## 입력값이 여러 줄의 값들인 경우(문자)
 
 ```javascript
-const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
-	.toString()
-	.trim()
-	.split('\n')
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n')
 ```
 
 <!-- input:
@@ -73,12 +54,7 @@ output: ['a', 'b', 'c', 'd'] -->
 ## 입력값이 여러 줄의 값들인 경우(숫자)
 
 ```javascript
-const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
-	.toString()
-	.trim()
-	.split('\n')
-	.map(Number)
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(Number)
 ```
 
 <!-- input:
@@ -93,7 +69,7 @@ output: [1, 2, 3, 4, 5] -->
 
 ```javascript
 const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.readFileSync('/dev/stdin')
 	.toString()
 	.trim()
 	.split('\n')
@@ -116,7 +92,7 @@ output: [
 
 ```javascript
 const input = require('fs')
-	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.readFileSync('/dev/stdin')
 	.toString()
 	.trim()
 	.split('\n')
