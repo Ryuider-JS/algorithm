@@ -4,54 +4,64 @@
 
 ## 입력값이 하나일 경우(문자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim();
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+```
 
 <!-- input: hello -->
 <!-- output: hello -->
 
 ## 입력값이 하나일 경우(숫자)
 
-const input = +require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim();
+```javascript
+const input = +require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+```
 
 <!-- input: 8 -->
 <!-- output: 8 -->
 
 ## 입력값이 띄어쓰기로 구분된 한 줄의 값들인 경우(문자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim()
-.split(" ");
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+	.split(' ')
+```
 
 <!-- input: hello world -->
 <!-- output: ['hello', 'world'] -->
 
 ## 입력값이 띄어쓰기로 구분된 한 줄의 값들인 경우(숫자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim()
-.split(" ")
-.map(Number);
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+	.split(' ')
+	.map(Number)
+```
 
 <!-- input: 8 7 56 -->
 <!-- output: [8, 7, 56] -->
 
 ## 입력값이 여러 줄의 값들인 경우(문자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim()
-.split("\n");
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+	.split('\n')
+```
 
 <!-- input:
 a
@@ -62,12 +72,14 @@ output: ['a', 'b', 'c', 'd'] -->
 
 ## 입력값이 여러 줄의 값들인 경우(숫자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim()
-.split("\n")
-.map(Number);
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+	.split('\n')
+	.map(Number)
+```
 
 <!-- input:
 1
@@ -79,12 +91,14 @@ output: [1, 2, 3, 4, 5] -->
 
 ## 입력값이 여러 줄의 값들이 띄어쓰기로 구분되어 있는 경우(문자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim()
-.split("\n")
-.map((el) => el.split(" "));
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+	.split('\n')
+	.map((el) => el.split(' '))
+```
 
 <!-- input:
 ab cd
@@ -100,12 +114,14 @@ output: [
 
 ## 입력값이 여러 줄의 값들이 띄어쓰기로 구분되어 있는 경우(모두 숫자)
 
-const input = require("fs")
-.readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
-.toString()
-.trim()
-.split("\n")
-.map((el) => el.split(" ").map(Number));
+```javascript
+const input = require('fs')
+	.readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
+	.toString()
+	.trim()
+	.split('\n')
+	.map((el) => el.split(' ').map(Number))
+```
 
 <!-- input:
 3
